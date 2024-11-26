@@ -1,0 +1,54 @@
+{
+  "name": "veterinar-discord",
+  "version": "0.1.0",
+  "description": "Діскорд бот для закритої спільноти котиків",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -b src",
+    "watch": "tsc -b src -w",
+    "start": "node --enable-source-maps dist/index.js",
+    "dev": "tsc-watch -b src --onSuccess \"node ./dist/index.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DemonWayne/veterinar-discord.git"
+  },
+  "author": "DemonWayne",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DemonWayne/veterinar-discord/issues"
+  },
+  "homepage": "https://github.com/DemonWayne/veterinar-discord#readme",
+  "imports": {
+    "#handlers/*": "./dist/lib/handlers/*.js",
+    "#models/*": "./dist/lib/models/*.js",
+    "#types/*": "./dist/lib/types/*.js",
+    "#utils/*": "./dist/lib/utils/*.js",
+    "#lib/*": "./dist/lib/*.js",
+    "#root/*": "./dist/*.js"
+  },
+  "dependencies": {
+    "@sapphire/async-queue": "^1.5.3",
+    "@sapphire/discord.js-utilities": "^7.3.0",
+    "@sapphire/duration": "^1.1.2",
+    "@sapphire/framework": "^5.2.1",
+    "@sapphire/plugin-logger": "^4.0.2",
+    "@sapphire/plugin-subcommands": "^7.0.0",
+    "@sapphire/utilities": "^3.17.0",
+    "discord.js": "^14.16.2",
+    "dotenv": "^16.4.5",
+    "luxon": "^3.5.0",
+    "mongoose": "^8.6.3",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "@sapphire/decorators": "^6.1.0",
+    "@sapphire/eslint-config": "^5.0.5",
+    "@sapphire/ts-config": "^5.0.1",
+    "@types/luxon": "^3.4.2",
+    "@types/node-cron": "^3.0.11",
+    "tsc-watch": "^6.2.0",
+    "typescript": "^5.6.2"
+  }
+}

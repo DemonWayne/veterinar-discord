@@ -1,0 +1,21 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "outDir": "../dist",
+    "rootDir": ".",
+    "baseUrl": ".",
+    "skipLibCheck": true,
+    "moduleResolution": "Node16",
+    "paths": {
+      "#handlers/*": ["lib/handlers/*"],
+      "#types/*": ["lib/types/*"],
+      "#utils/*": ["lib/utils/*"],
+      "#lib/*": ["lib/*"],
+      "#root/*": ["*"]
+    },
+    "composite": true,
+  },
+  "include": [".", "./**/*.json"],
+  "exclude": ["./tsconfig.json"]
+}
